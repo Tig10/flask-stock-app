@@ -1,0 +1,23 @@
+{% extends 'base_layout.html' %}
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+
+    <div class="column"></div>
+    <div class="column">
+        <div class="container is-max-desktop">
+            <h1 class="title is-4">
+                Welcome to StockApp
+            </h1>
+            <hr>
+            <h2>
+                This is a basic way to view the price of a stock using Flask.
+            </h2>
+        </div>
+    </div>
+    <div class="column">
+        {% include 'portfolio.html' %}
+    </div>
+    <div class="column"></div>
+    
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+<body>
+    <nav class="navbar is-light">
+        <div class="navbar-brand">
+            <a href="{{ url_for('home_page')}}" class="navbar-item title is-6">Stock App</a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a href="{{ url_for('home_page') }}" class="navbar-item {% if request.url_rule.endpoint == 'home_page' %} is-active {% endif %} ">Home</a>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="columns">
+            {% block content %}{% endblock %}
+        </div>
+    </section> 
+</body>
+</html>
